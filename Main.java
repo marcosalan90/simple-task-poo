@@ -1,16 +1,129 @@
+// // Classe Tarefa
+// public class Tarefa {
+//     private String titulo;
+//     private String descricao;
+//     private String prazo;
+//     private int prioridade;
+//     private Categoria categoria;
+
+//     // Construtor
+//     public Tarefa(String titulo, String descricao, String prazo, int prioridade) {
+//         this.titulo = titulo;
+//         this.descricao = descricao;
+//         this.prazo = prazo;
+//         this.prioridade = prioridade;
+//     }
+
+//     // Métodos get e set
+//     public String getTitulo() {
+//         return titulo;
+//     }
+
+//     public void setTitulo(String titulo) {
+//         this.titulo = titulo;
+//     }
+
+//     public String getDescricao() {
+//         return descricao;
+//     }
+
+//     public void setDescricao(String descricao) {
+//         this.descricao = descricao;
+//     }
+
+//     public String getPrazo() {
+//         return prazo;
+//     }
+
+//     public void setPrazo(String prazo) {
+//         this.prazo = prazo;
+//     }
+
+//     public int getPrioridade() {
+//         return prioridade;
+//     }
+
+//     public void setPrioridade(int prioridade) {
+//         this.prioridade = prioridade;
+//     }
+
+//     public Categoria getCategoria() {
+//         return categoria;
+//     }
+
+//     public void setCategoria(Categoria categoria) {
+//         this.categoria = categoria;
+//     }
+
+//     // Método para exibir detalhes da tarefa
+//     public void exibirDetalhes() {
+//         System.out.println("Título: " + titulo);
+//         System.out.println("Descrição: " + descricao);
+//         System.out.println("Prazo: " + prazo);
+//         System.out.println("Prioridade: " + prioridade);
+//         if (categoria != null) {
+//             System.out.println("Categoria: " + categoria.getNome());
+//         }
+//     }
+// }
+
+// // Classe Categoria
+// public class Categoria {
+//     private String nome;
+
+//     // Construtor
+//     public Categoria(String nome) {
+//         this.nome = nome;
+//     }
+
+//     // Métodos get e set
+//     public String getNome() {
+//         return nome;
+//     }
+
+//     public void setNome(String nome) {
+//         this.nome = nome;
+//     }
+// }
+
+// // Classe principal para testar
+// public class Main {
+//     public static void main(String[] args) {
+//         // Criando uma instância de Tarefa
+//         Tarefa tarefa = new Tarefa("Estudar Java", "Completar os exercícios de POO", "2024-09-01", 1);
+
+//         // Modificando o título da tarefa
+//         tarefa.setTitulo("Estudar Java Avançado");
+
+//         // Exibindo o novo título
+//         System.out.println("Novo Título: " + tarefa.getTitulo());
+
+//         // Criando uma instância de Categoria
+//         Categoria categoria = new Categoria("Estudos");
+
+//         // Associando a categoria à tarefa
+//         tarefa.setCategoria(categoria);
+
+//         // Exibindo os detalhes da tarefa
+//         tarefa.exibirDetalhes();
+//     }
+// }
+
 public class Tarefa {
     private String titulo;
     private String descricao;
     private String prazo;
-    private String prioridade;
+    private int prioridade;
 
-    public Tarefa(String titulo, String descricao, String prazo, String prioridade) {
+    // Construtor
+    public Tarefa(String titulo, String descricao, String prazo, int prioridade) {
         this.titulo = titulo;
         this.descricao = descricao;
         this.prazo = prazo;
         this.prioridade = prioridade;
     }
 
+    // Métodos get e set
     public String getTitulo() {
         return titulo;
     }
@@ -35,92 +148,33 @@ public class Tarefa {
         this.prazo = prazo;
     }
 
-    public String getPrioridade() {
+    public int getPrioridade() {
         return prioridade;
     }
 
-    public void setPrioridade(String prioridade) {
+    public void setPrioridade(int prioridade) {
         this.prioridade = prioridade;
     }
-}
 
-public class Main {
+    // Método para exibir detalhes da tarefa
+    public void exibirDetalhes() {
+        System.out.println("Título: " + titulo);
+        System.out.println("Descrição: " + descricao);
+        System.out.println("Prazo: " + prazo);
+        System.out.println("Prioridade: " + prioridade);
+    }
+
     public static void main(String[] args) {
-        Tarefa tarefa1 = new Tarefa("Estudar Java", "Completar o curso de Java", "2024-09-30", "Alta");
+        // Criando uma instância da classe Tarefa
+        Tarefa tarefa = new Tarefa("Estudar Java", "Completar os exercícios de POO", "2024-09-01", 1);
 
-        // Modificar o título
-        tarefa1.setTitulo("Estudar Java Avançado");
+        // Modificando o título da tarefa
+        tarefa.setTitulo("Estudar Java Avançado");
 
-        // Acessar o novo título
-        System.out.println(tarefa1.getTitulo());  // Saída: Estudar Java Avançado
-    }
-}
+        // Exibindo o novo título
+        System.out.println("Novo Título: " + tarefa.getTitulo());
 
-
-public class Tarefa {
-    // ... (outros métodos)
-
-    public String exibirDetalhes() {
-        return "Título: " + titulo + "\nDescrição: " + descricao + "\nPrazo: " + prazo + "\nPrioridade: " + prioridade;
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Tarefa tarefa1 = new Tarefa("Estudar Java", "Completar o curso de Java", "2024-09-30", "Alta");
-        System.out.println(tarefa1.exibirDetalhes());
-    }
-}
-
-
-public class Categoria {
-    private String nome;
-
-    public Categoria(String nome) {
-        this.nome = nome;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-}
-
-public class Tarefa {
-    private String titulo;
-    private String descricao;
-    private String prazo;
-    private String prioridade;
-    private Categoria categoria;
-
-    public Tarefa(String titulo, String descricao, String prazo, String prioridade, Categoria categoria) {
-        this.titulo = titulo;
-        this.descricao = descricao;
-        this.prazo = prazo;
-        this.prioridade = prioridade;
-        this.categoria = categoria;
-    }
-
-    // ... (outros métodos)
-
-    public Categoria getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(Categoria categoria) {
-        this.categoria = categoria;
-    }
-}
-
-// public class Main {
-public class Main {
-    public static void main(String[] args) {
-        Categoria categoria1 = new Categoria("Estudos");
-        Tarefa tarefa1 = new Tarefa("Estudar Java", "Completar o curso de Java", "2024-09-30", "Alta", categoria1);
-
-        System.out.println(tarefa1.getCategoria().getNome());  // Saída: Estudos
+        // Exibindo todos os detalhes da tarefa
+        tarefa.exibirDetalhes();
     }
 }
